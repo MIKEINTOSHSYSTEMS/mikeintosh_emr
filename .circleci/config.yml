@@ -15,6 +15,12 @@ jobs:
             apk add --no-cache py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make
             pip install docker-compose
 
+      # Install Rust compiler
+      - run:
+          name: Install Rust compiler
+          command: |
+            curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+
       # Build and run the workflow script
       - run:
           name: Run Workflow Script
