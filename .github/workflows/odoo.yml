@@ -1,5 +1,5 @@
 name: Setup Odoo Instance
-description: Set up an instance of Odoo on GitHub Actions
+#description: Set up an instance of Odoo on GitHub Actions
 
 on:
   push:
