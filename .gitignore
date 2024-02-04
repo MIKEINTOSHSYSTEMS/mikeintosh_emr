@@ -1,0 +1,33 @@
+# Odoo-specific files and folders
+odoo-bin
+venv
+*.pyc
+
+# Docker-specific files and folders
+.dockerignore
+Dockerfile
+
+# Generated logs and data
+logs
+data
+
+# Other common exclusions
+#.git/
+.idea/
+__pycache__/
+*.swp
+
+# Exclude everything else except the specified files and folders
+*
+
+# Recursively include specified folders and their contents
+!addons/**
+!etc/**
+!screenshots/**
+
+# Explicit inclusions for individual files
+!docker-compose.yml
+!entrypoint.sh
+!README.md
+!run.sh
+!.gitignore
