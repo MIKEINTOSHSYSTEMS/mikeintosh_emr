@@ -4568,3 +4568,5 @@ View error context:
 2024-02-04 15:32:46,200 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:32:46] "POST /web/database/backup HTTP/1.1" 200 - 2 0.001 4.451
 2024-02-04 15:33:12,359 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `Send Appointment reminder`. 
 2024-02-04 15:33:12,364 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `Send Appointment reminder` done. 
+2024-02-04 17:54:21,744 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
+2024-02-04 17:54:21,750 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
