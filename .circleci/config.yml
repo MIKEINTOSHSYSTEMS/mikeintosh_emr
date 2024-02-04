@@ -23,8 +23,10 @@ jobs:
             chmod +x run.sh  # Add execute permissions
             ./run.sh /tmp/workspace/mikeintosh_emr 10017 20017
 
-      # Build and run tests if applicable
-      # Add your test steps here if needed
+      # Wait for Docker daemon to be ready
+      - run:
+          name: Wait for Docker Daemon
+          command: docker info
 
       # Deploy the application
       - deploy:
