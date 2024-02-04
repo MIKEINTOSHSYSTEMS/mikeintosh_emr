@@ -10,27 +10,37 @@ jobs:
     steps:
       - checkout
 
-      # Install dos2unix for line endings conversion
+      # Check if Docker is installed
       - run:
-          name: Install dos2unix
-          command: sudo apt-get update && sudo apt-get install -y dos2unix
+          name: Check if Docker is installed
+          command: |
+            if ! command -v docker &> /dev/null; then
+              echo "Docker is not installed. Installing Docker..."
+              # Install Docker
+              curl -fsSL https://get.docker.com -o get-docker.sh
+              sudo sh get-docker.sh
+              sudo usermod -aG docker $USER
+              # Start Docker
+              sudo service docker start
+            fi
+
+      # Start Docker and wait for the daemon to be ready
+      - run:
+          name: Start Docker and wait for the daemon
+          command: |
+            until docker info &>/dev/null; do
+              echo "Waiting for Docker to start..."
+              sleep 1
+            done
 
       # Clone the repository and prepare Odoo
       - run:
           name: Clone Repository and Prepare Odoo
           command: |
-            dos2unix run.sh  # Convert line endings
-            chmod +x run.sh  # Add execute permissions
             ./run.sh /tmp/workspace/mikeintosh_emr 10017 20017
 
-      # Wait for Docker daemon to be ready
-      - run:
-          name: Wait for Docker Daemon
-          command: |
-            until docker info >/dev/null 2>&1; do
-              echo "Waiting for Docker daemon to be ready..."
-              sleep 1
-            done
+      # Build and run tests if applicable
+      # Add your test steps here if needed
 
       # Deploy the application
       - deploy:

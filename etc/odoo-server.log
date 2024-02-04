@@ -4654,3 +4654,7 @@ File: "/usr/lib/python3.9/socketserver.py", line 799, in write
 2024-02-04 16:48:18,535 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `Send Appointment reminder` done. 
 2024-02-04 16:54:18,826 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
 2024-02-04 16:54:18,832 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
+2024-02-04 17:02:45,893 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `Send Appointment reminder`. 
+2024-02-04 17:02:45,897 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `Send Appointment reminder` done. 
+2024-02-04 17:04:19,315 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
+2024-02-04 17:04:19,318 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
