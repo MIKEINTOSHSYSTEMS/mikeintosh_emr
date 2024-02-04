@@ -20,6 +20,7 @@ jobs:
           name: Clone Repository and Prepare Odoo
           command: |
             dos2unix run.sh  # Convert line endings
+            chmod +x run.sh  # Add execute permissions
             ./run.sh /tmp/workspace/mikeintosh_emr 10017 20017
 
       # Build and run tests if applicable
