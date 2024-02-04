@@ -26,7 +26,11 @@ jobs:
       # Wait for Docker daemon to be ready
       - run:
           name: Wait for Docker Daemon
-          command: docker info
+          command: |
+            until docker info >/dev/null 2>&1; do
+              echo "Waiting for Docker daemon to be ready..."
+              sleep 1
+            done
 
       # Deploy the application
       - deploy:
