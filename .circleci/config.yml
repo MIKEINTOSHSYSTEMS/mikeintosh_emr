@@ -21,6 +21,11 @@ jobs:
           command: |
             curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
+      # Update pip
+      - run:
+          name: Update pip
+          command: pip install --upgrade pip
+
       # Build and run the workflow script
       - run:
           name: Run Workflow Script
