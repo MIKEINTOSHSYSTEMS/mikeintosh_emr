@@ -21,7 +21,8 @@ jobs:
       # Download and execute run.sh script to set up Odoo instance
       - name: Set up Odoo instance
         run: |
-          curl -s https://raw.githubusercontent.com/MIKEINTOSHSYSTEMS/mikeintosh_emr/main/run.sh | sudo bash -s odoo-one 10017 20017
+          set -x
+          curl -s https://raw.githubusercontent.com/MIKEINTOSHSYSTEMS/mikeintosh_emr/main/run.sh | bash -s odoo-one 10017 20017
 
       # Display information about the deployment
       - name: Display Deployment Information

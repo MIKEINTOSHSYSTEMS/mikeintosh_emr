@@ -4736,3 +4736,5 @@ ValueError: <class 'ValueError'>: "External ID not found in the system: yan_hims
 'model._cron_send_digest_email()'
 2024-02-04 17:18:01,803 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `Send Appointment reminder`. 
 2024-02-04 17:18:01,806 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `Send Appointment reminder` done. 
+2024-02-04 17:24:20,430 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
+2024-02-04 17:24:20,435 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
