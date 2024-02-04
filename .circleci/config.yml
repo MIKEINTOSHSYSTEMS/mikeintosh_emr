@@ -3,53 +3,44 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: docker:20.10.12
+      - image: circleci/python:3.9
+
+    working_directory: /tmp/workspace
 
     steps:
       - checkout
 
-      # Install Docker Compose
+      # Install Docker
+      - setup_remote_docker:
+          version: 20.10.7
+
+      # Clone the repository and prepare Odoo
       - run:
-          name: Install Docker Compose
+          name: Clone Repository and Prepare Odoo
           command: |
-            apk add --no-cache py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make
-            pip install docker-compose
+            ./run.sh /tmp/workspace/mikeintosh_emr 10017 20017
 
-      # Install Rust compiler
-      - run:
-          name: Install Rust compiler
+      # Build and run tests if applicable
+      # Add your test steps here if needed
+
+      # Deploy the application
+      - deploy:
+          name: Deploy Odoo
           command: |
-            curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+            docker-compose -f /tmp/workspace/mikeintosh_emr/docker-compose.yml up -d
 
-      # Update pip
+      # Output information about the deployment
       - run:
-          name: Update pip
-          command: pip install --upgrade pip
-
-      # Build and run the workflow script
-      - run:
-          name: Run Workflow Script
+          name: Display Deployment Information
           command: |
-            ./run.sh odoo_project_directory 10017 20017
+            echo 'Started Odoo @ http://localhost:10017 | Master Password: momonahealthcare | Live chat port: 20017'
 
-      # Additional steps can be added here if needed
-
-# Workflows
 workflows:
   version: 2
-  build:
+  build_and_deploy:
     jobs:
       - build:
           filters:
             branches:
               only:
                 - main
-
-# Define triggers
-triggers:
-  - schedule:
-      cron: "0 0 * * *"
-      filters:
-        branches:
-          only:
-            - main
