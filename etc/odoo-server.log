@@ -4568,3 +4568,77 @@ View error context:
 2024-02-04 15:32:46,200 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:32:46] "POST /web/database/backup HTTP/1.1" 200 - 2 0.001 4.451
 2024-02-04 15:33:12,359 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `Send Appointment reminder`. 
 2024-02-04 15:33:12,364 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `Send Appointment reminder` done. 
+2024-02-04 15:34:16,449 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
+2024-02-04 15:34:16,453 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
+2024-02-04 15:35:12,409 1 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.139682402793216, started 139682402793216)> virtual real time limit (172/120s) reached. 
+2024-02-04 15:35:12,409 1 INFO ? odoo.service.server: Dumping stacktrace of limit exceeding threads before reloading 
+2024-02-04 15:35:12,412 1 INFO ? odoo.tools.misc: 
+# Thread: <Thread(odoo.service.http.request.139682402793216, started 139682402793216)> (db:momonahealthcare) (uid:None) (url:http://68.183.152.63:10017/web/database/backup)
+File: "/usr/lib/python3.9/threading.py", line 912, in _bootstrap
+  self._bootstrap_inner()
+File: "/usr/lib/python3.9/threading.py", line 954, in _bootstrap_inner
+  self.run()
+File: "/usr/lib/python3.9/threading.py", line 892, in run
+  self._target(*self._args, **self._kwargs)
+File: "/usr/lib/python3.9/socketserver.py", line 650, in process_request_thread
+  self.finish_request(request, client_address)
+File: "/usr/lib/python3.9/socketserver.py", line 360, in finish_request
+  self.RequestHandlerClass(request, client_address, self)
+File: "/usr/lib/python3.9/socketserver.py", line 720, in __init__
+  self.handle()
+File: "/usr/lib/python3/dist-packages/werkzeug/serving.py", line 345, in handle
+  BaseHTTPRequestHandler.handle(self)
+File: "/usr/lib/python3.9/http/server.py", line 427, in handle
+  self.handle_one_request()
+File: "/usr/lib/python3/dist-packages/werkzeug/serving.py", line 379, in handle_one_request
+  return self.run_wsgi()
+File: "/usr/lib/python3/dist-packages/werkzeug/serving.py", line 323, in run_wsgi
+  execute(self.server.app)
+File: "/usr/lib/python3/dist-packages/werkzeug/serving.py", line 315, in execute
+  write(data)
+File: "/usr/lib/python3/dist-packages/werkzeug/serving.py", line 296, in write
+  self.wfile.write(data)
+File: "/usr/lib/python3.9/socketserver.py", line 799, in write
+  self._sock.sendall(b) 
+2024-02-04 15:35:12,412 1 INFO ? odoo.service.server: Initiating server reload 
+2024-02-04 15:35:13,325 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 6 connections  
+2024-02-04 15:35:14,132 1 INFO ? odoo: Odoo version 16.0-20240126 
+2024-02-04 15:35:14,132 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-02-04 15:35:14,132 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/etc/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-02-04 15:35:14,133 1 INFO ? odoo: database: momonadbuser@db:5432 
+2024-02-04 15:35:14,269 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-02-04 15:35:14,499 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on bc266695e8ad:8069 
+2024-02-04 15:35:15,410 1 INFO momonahealthcare odoo.modules.loading: loading 1 modules... 
+2024-02-04 15:35:15,419 1 INFO momonahealthcare odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2024-02-04 15:35:15,466 1 INFO momonahealthcare odoo.modules.loading: loading 86 modules... 
+2024-02-04 15:35:16,168 1 INFO momonahealthcare odoo.modules.loading: 86 modules loaded in 0.70s, 0 queries (+0 extra) 
+2024-02-04 15:35:16,437 1 INFO momonahealthcare odoo.modules.loading: Modules loaded. 
+2024-02-04 15:35:16,445 1 INFO momonahealthcare odoo.modules.registry: Registry loaded in 1.054s 
+2024-02-04 15:35:16,454 1 INFO momonahealthcare odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2024-02-04 15:35:16,707 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:35:16] "GET /websocket HTTP/1.1" 101 - 26 0.030 1.287
+2024-02-04 15:35:22,043 1 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2024-02-04 15:37:02,112 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 15:37:02] "GET /muk_web_theme/static/img/background.png HTTP/1.1" 200 - 0 0.000 0.211
+2024-02-04 15:44:15,022 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
+2024-02-04 15:44:15,031 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
+2024-02-04 15:48:15,216 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `Send Appointment reminder`. 
+2024-02-04 15:48:15,222 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `Send Appointment reminder` done. 
+2024-02-04 15:54:15,542 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
+2024-02-04 15:54:15,549 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
+2024-02-04 16:02:43,275 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `Send Appointment reminder`. 
+2024-02-04 16:02:43,279 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `Send Appointment reminder` done. 
+2024-02-04 16:04:16,058 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
+2024-02-04 16:04:16,063 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
+2024-02-04 16:12:16,478 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `Mail: Email Queue Manager`. 
+2024-02-04 16:12:16,484 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `Mail: Email Queue Manager` done. 
+2024-02-04 16:12:16,491 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `Notification: Send scheduled message notifications`. 
+2024-02-04 16:12:16,495 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `Notification: Send scheduled message notifications` done. 
+2024-02-04 16:12:16,502 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `Partner Autocomplete : Sync with remote DB`. 
+2024-02-04 16:12:16,506 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `Partner Autocomplete : Sync with remote DB` done. 
+2024-02-04 16:12:16,513 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `SMS: SMS Queue Manager`. 
+2024-02-04 16:12:16,517 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `SMS: SMS Queue Manager` done. 
+2024-02-04 16:12:16,526 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `Snailmail: process letters queue`. 
+2024-02-04 16:12:16,532 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `Snailmail: process letters queue` done. 
+2024-02-04 16:14:16,661 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
+2024-02-04 16:14:16,666 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
+2024-02-04 16:17:59,253 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `Send Appointment reminder`. 
+2024-02-04 16:17:59,261 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `Send Appointment reminder` done. 

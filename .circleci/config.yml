@@ -1,0 +1,44 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: docker:20.10.12
+
+    steps:
+      - checkout
+
+      # Install Docker Compose
+      - run:
+          name: Install Docker Compose
+          command: |
+            apk add --no-cache py-pip python3-dev libffi-dev openssl-dev gcc libc-dev make
+            pip install docker-compose
+
+      # Build and run the workflow script
+      - run:
+          name: Run Workflow Script
+          command: |
+            ./run.sh odoo_project_directory 10017 20017
+
+      # Additional steps can be added here if needed
+
+# Workflows
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - main
+
+# Define triggers
+triggers:
+  - schedule:
+      cron: "0 0 * * *"
+      filters:
+        branches:
+          only:
+            - main
