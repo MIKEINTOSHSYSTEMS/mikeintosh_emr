@@ -1,4 +1,4 @@
-# Installing Odoo 17.0 with one command (Supports multiple Odoo instances on one server).
+# MHC - EMR by Installing Odoo 16.0 or Odoo 17.0 with one command (Supports multiple Odoo instances on one server).
 
 ## Quick Installation
 
