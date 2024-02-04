@@ -10,15 +10,16 @@ jobs:
     steps:
       - checkout
 
-      # Install Docker
-      - setup_remote_docker:
-          version: 20.10.7
+      # Install dos2unix for line endings conversion
+      - run:
+          name: Install dos2unix
+          command: sudo apt-get update && sudo apt-get install -y dos2unix
 
       # Clone the repository and prepare Odoo
       - run:
           name: Clone Repository and Prepare Odoo
           command: |
-            chmod +x run.sh  # Ensure the script has execute permissions
+            dos2unix run.sh  # Convert line endings
             ./run.sh /tmp/workspace/mikeintosh_emr 10017 20017
 
       # Build and run tests if applicable
