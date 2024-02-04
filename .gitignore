@@ -16,9 +16,10 @@ data
 .idea/
 __pycache__/
 *.swp
+postgresql/
 
 # Exclude everything else except the specified files and folders
-*
+
 
 # Recursively include specified folders and their contents
 !addons/**
