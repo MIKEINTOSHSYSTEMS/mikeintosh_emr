@@ -1,5 +1,5 @@
 name: Setup Odoo Instance
-#description: Set up an instance of Odoo on GitHub Actions
+# description: Set up an instance of Odoo on GitHub Actions
 
 on:
   push:
@@ -14,6 +14,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      # Ensure Unix-style line endings
+      - name: Convert line endings to Unix style
+        run: sed -i 's/\r$//' run.sh
+
+      # Ensure script has executable permissions
+      - name: Set execute permissions for run.sh
+        run: chmod +x run.sh
+
       # Install curl if not already installed
       - name: Install curl
         run: sudo apt-get update && sudo apt-get install -y curl
@@ -23,6 +31,7 @@ jobs:
         run: |
           curl -s https://raw.githubusercontent.com/MIKEINTOSHSYSTEMS/mikeintosh_emr/main/run.sh | sudo bash -s odoo-one 10017 20017
 
-      # Start Odoo container
-      - name: Start Odoo container
-        run: docker-compose -f odoo-one/docker-compose.yml up -d
+      # Display information about the deployment
+      - name: Display Deployment Information
+        run: |
+          echo 'Odoo instance is set up @ http://localhost:10017 | Master Password: momonahealthcare | Live chat port: 20017'
