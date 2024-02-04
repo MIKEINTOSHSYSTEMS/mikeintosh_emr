@@ -18,6 +18,7 @@ jobs:
       - run:
           name: Clone Repository and Prepare Odoo
           command: |
+            chmod +x run.sh  # Ensure the script has execute permissions
             ./run.sh /tmp/workspace/mikeintosh_emr 10017 20017
 
       # Build and run tests if applicable
