@@ -8,9 +8,9 @@
     Manage Medical Surgery related operations hospital Information management system 
     """,
     'version': '1.5',
-    'author': 'Yanos Group',
-    'support': 'support@yanosgroup.com',
-    'website': 'www.yanosgroup.com',
+    'author': 'Momona Healthcare',
+    'support': 'support@momonahealthcare.com',
+    'website': 'www.momonahealthcare.com',
     'license': 'OPL-1',
     'depends': ['yan_hims_tasks'],
     'data': [

@@ -9,8 +9,8 @@
     """,
     'version': '1.0.5',
     'category': 'Medical',
-    'author': 'Yanos Group',
-    'website': 'https://www.yanosgroup.com',
+    'author': 'Momona Healthcare',
+    'website': 'https://www.momonahealthcare.com',
     'license': 'OPL-1',
     'depends': ['yan_hims_start', 'yan_hmis_documents_preview'],
     'data': [

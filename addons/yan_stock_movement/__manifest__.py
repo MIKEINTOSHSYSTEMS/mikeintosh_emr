@@ -4,8 +4,8 @@
     'name': 'Create Stock Moves With Invoice And Refunds',
     'category': 'Accounting',
     'version': '1.0.1',
-    'author' : 'Yanos Group',
-    'website': 'https://www.yanosgroup.com',
+    'author' : 'Momona Healthcare',
+    'website': 'https://www.momonahealthcare.com',
     'license': 'OPL-1',
     'summary': """Update Stock Automatically when validate Invoice And Refunds.""",
     'description': """Update Stock Automatically when validate Invoice And Refunds.

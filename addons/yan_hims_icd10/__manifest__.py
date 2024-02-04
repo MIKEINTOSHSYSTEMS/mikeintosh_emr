@@ -8,8 +8,8 @@
     'category': 'Medical',
     'license': 'OPL-1',
     'depends' : ['yan_hims_tasks'],
-    'author': 'Yanos Group',
-    'website': 'www.yanosgroup.com',
+    'author': 'Momona Healthcare',
+    'website': 'www.momonahealthcare.com',
     'description': """
         International Classification of Diseases, icd10 for hospital Information management system
     """,

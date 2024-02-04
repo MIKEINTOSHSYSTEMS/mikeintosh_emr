@@ -9,8 +9,8 @@
     """,
     'license': 'OPL-1',
     'version': '1.2',
-    'author': 'Yanos Group.',
-    'website': 'https://www.yanosgroup.com',
+    'author': 'Momona Healthcare.',
+    'website': 'https://www.momonahealthcare.com',
     'depends': ['yan_hims_tasks', 'yan_hims_surgery'],
     'data': [
         'security/security.xml',

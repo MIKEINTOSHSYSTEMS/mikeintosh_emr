@@ -1837,3 +1837,324 @@ File: "/usr/lib/python3.9/socket.py", line 704, in readinto
 2024-02-04 14:40:58,217 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
 2024-02-04 14:50:12,752 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `payment: post-process transactions`. 
 2024-02-04 14:50:12,756 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `payment: post-process transactions` done. 
+2024-02-04 14:52:37,573 1 ERROR ? odoo.addons.bus.models.bus: Bus.loop error, sleep and retry 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/bus/models/bus.py", line 182, in run
+    self.loop()
+  File "/usr/lib/python3/dist-packages/odoo/addons/bus/models/bus.py", line 167, in loop
+    conn.poll()
+psycopg2.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+2024-02-04 14:52:37,579 1 INFO momonahealthcare odoo.sql_db: Connection to the database failed 
+2024-02-04 14:52:37,580 1 WARNING momonahealthcare odoo.addons.base.models.ir_cron: Exception in cron: 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_cron.py", line 102, in _process_jobs
+    with db.cursor() as cron_cr:
+  File "/usr/lib/python3/dist-packages/odoo/sql_db.py", line 740, in cursor
+    return Cursor(self.__pool, self.__dbname, self.__dsn)
+  File "/usr/lib/python3/dist-packages/odoo/sql_db.py", line 267, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "<decorator-gen-2>", line 2, in borrow
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/odoo/sql_db.py", line 668, in borrow
+    result = psycopg2.connect(
+  File "/usr/lib/python3/dist-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "db" (172.24.0.2), port 5432 failed: FATAL:  the database system is shutting down
+
+2024-02-04 14:52:37,587 1 INFO momonahealthcare odoo.sql_db: Connection to the database failed 
+2024-02-04 14:52:37,587 1 WARNING momonahealthcare odoo.addons.base.models.ir_cron: Exception in cron: 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_cron.py", line 102, in _process_jobs
+    with db.cursor() as cron_cr:
+  File "/usr/lib/python3/dist-packages/odoo/sql_db.py", line 740, in cursor
+    return Cursor(self.__pool, self.__dbname, self.__dsn)
+  File "/usr/lib/python3/dist-packages/odoo/sql_db.py", line 267, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "<decorator-gen-2>", line 2, in borrow
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/odoo/sql_db.py", line 668, in borrow
+    result = psycopg2.connect(
+  File "/usr/lib/python3/dist-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "db" (172.24.0.2), port 5432 failed: FATAL:  the database system is shutting down
+
+2024-02-04 14:52:38,300 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-02-04 14:52:38,301 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-02-04 14:52:39,390 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 1 connections  
+2024-02-04 14:52:49,805 1 INFO ? odoo: Odoo version 16.0-20240126 
+2024-02-04 14:52:49,805 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-02-04 14:52:49,805 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/etc/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-02-04 14:52:49,805 1 INFO ? odoo: database: momonadbuser@db:5432 
+2024-02-04 14:52:49,968 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-02-04 14:52:50,213 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on d9a3d7967778:8069 
+2024-02-04 14:52:51,060 1 INFO momonahealthcare odoo.modules.loading: loading 1 modules... 
+2024-02-04 14:52:51,068 1 INFO momonahealthcare odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2024-02-04 14:52:51,102 1 INFO momonahealthcare odoo.modules.loading: loading 56 modules... 
+2024-02-04 14:52:51,662 1 INFO momonahealthcare odoo.modules.loading: 56 modules loaded in 0.56s, 0 queries (+0 extra) 
+2024-02-04 14:52:51,832 1 INFO momonahealthcare odoo.modules.loading: Modules loaded. 
+2024-02-04 14:52:51,839 1 INFO momonahealthcare odoo.modules.registry: Registry loaded in 0.813s 
+2024-02-04 14:52:51,841 1 INFO momonahealthcare odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-02-04 14:52:52,032 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:52:52] "GET /websocket HTTP/1.1" 101 - 22 0.047 0.960
+2024-02-04 14:52:52,458 1 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2024-02-04 14:55:02,026 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:02] "GET /web HTTP/1.1" 200 - 88 0.060 0.460
+2024-02-04 14:55:03,665 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:03] "POST /web/action/load HTTP/1.1" 200 - 11 0.006 0.226
+2024-02-04 14:55:03,685 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:03] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 12 0.005 0.011
+2024-02-04 14:55:04,148 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:04] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 3 0.007 0.017
+2024-02-04 14:55:04,196 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:04] "GET /mail/static/src/audio/ting.ogg HTTP/1.1" 206 - 0 0.000 0.008
+2024-02-04 14:55:04,210 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:04] "GET /web/image/res.company/1/favicon HTTP/1.1" 304 - 10 0.013 0.012
+2024-02-04 14:55:04,214 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:04] "POST /mail/init_messaging HTTP/1.1" 200 - 46 0.049 0.054
+2024-02-04 14:55:04,276 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:04] "POST /web/dataset/call_kw/res.config.settings/get_views HTTP/1.1" 200 - 36 0.023 0.146
+2024-02-04 14:55:04,451 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:04] "POST /mail/load_message_failures HTTP/1.1" 200 - 3 0.003 0.005
+2024-02-04 14:55:05,719 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:05] "POST /web/dataset/call_kw/res.config.settings/onchange HTTP/1.1" 200 - 138 0.047 0.044
+2024-02-04 14:55:06,311 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:06] "POST /base_setup/demo_active HTTP/1.1" 200 - 3 0.002 0.004
+2024-02-04 14:55:06,318 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:06] "POST /base_setup/data HTTP/1.1" 200 - 6 0.003 0.004
+2024-02-04 14:55:10,208 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:10] "POST /web/action/load HTTP/1.1" 200 - 11 0.007 0.012
+2024-02-04 14:55:10,686 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:10] "POST /web/dataset/call_kw/ir.module.module/get_views HTTP/1.1" 200 - 41 0.018 0.034
+2024-02-04 14:55:11,360 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:11] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 4 0.004 0.010
+2024-02-04 14:55:11,391 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:11] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 44 0.025 0.019
+2024-02-04 14:55:12,351 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:12] "GET /yan_hims_ipd/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.004
+2024-02-04 14:55:12,352 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:12] "GET /yan_hims_laboratory/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.003
+2024-02-04 14:55:12,356 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:12] "GET /yan_hims_online_appointment/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.002
+2024-02-04 14:55:12,361 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:12] "GET /yan_hims_portal/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.004
+2024-02-04 14:55:12,361 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:12] "GET /yan_hims_surgery/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.003
+2024-02-04 14:55:12,363 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:12] "GET /yan_hims_radiology/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.005
+2024-02-04 14:55:12,821 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:12] "GET /yan_hims_tasks/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.002
+2024-02-04 14:55:12,824 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:12] "GET /yan_hmis_pharmacy/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.001
+2024-02-04 14:55:12,868 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:12] "GET /yan_laboratory/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.003
+2024-02-04 14:55:12,871 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:12] "GET /yan_pharmacy/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.003
+2024-02-04 14:55:12,878 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:12] "GET /yan_radiology/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.002
+2024-02-04 14:55:12,904 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:12] "GET /yan_hims_ambulance/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.001
+2024-02-04 14:55:13,256 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:13] "GET /yan_hims_bloodbank/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.002
+2024-02-04 14:55:46,727 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:46] "POST /web/action/load HTTP/1.1" 200 - 10 0.004 0.008
+2024-02-04 14:55:47,166 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:47] "POST /web/dataset/call_kw/base.module.update/get_views HTTP/1.1" 200 - 9 0.006 0.012
+2024-02-04 14:55:47,582 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:47] "POST /web/dataset/call_kw/base.module.update/onchange HTTP/1.1" 200 - 2 0.001 0.004
+2024-02-04 14:55:51,830 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:51] "POST /web/dataset/call_kw/base.module.update/create HTTP/1.1" 200 - 4 0.003 0.006
+2024-02-04 14:55:52,280 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:52] "POST /web/dataset/call_kw/base.module.update/read HTTP/1.1" 200 - 3 0.002 0.004
+2024-02-04 14:55:52,681 1 INFO momonahealthcare odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user dev@momonahealthcare.com #2 via 196.191.221.14 
+2024-02-04 14:55:53,632 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:55:53] "POST /web/dataset/call_button HTTP/1.1" 200 - 1166 0.441 0.515
+2024-02-04 14:56:07,124 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:56:07] "GET /yan_hims_start/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.001
+2024-02-04 14:56:12,067 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:56:12] "GET /web HTTP/1.1" 200 - 11 0.006 0.014
+2024-02-04 14:56:13,525 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:56:13] "POST /web/action/load HTTP/1.1" 200 - 10 0.004 0.009
+2024-02-04 14:56:13,761 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:56:13] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 8 0.006 0.011
+2024-02-04 14:56:13,948 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:56:13] "POST /web/dataset/call_kw/ir.module.module/get_views HTTP/1.1" 200 - 3 0.002 0.008
+2024-02-04 14:56:14,186 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:56:14] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 2 0.002 0.006
+2024-02-04 14:56:14,217 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:56:14] "GET /web/image/res.company/1/favicon HTTP/1.1" 304 - 5 0.004 0.010
+2024-02-04 14:56:14,220 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:56:14] "POST /mail/init_messaging HTTP/1.1" 200 - 30 0.030 0.026
+2024-02-04 14:56:14,222 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:56:14] "GET /mail/static/src/audio/ting.ogg HTTP/1.1" 206 - 0 0.000 0.003
+2024-02-04 14:56:14,580 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:56:14] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 4 0.004 0.011
+2024-02-04 14:56:14,588 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:56:14] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 42 0.031 0.022
+2024-02-04 14:56:14,648 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:56:14] "POST /mail/load_message_failures HTTP/1.1" 200 - 3 0.004 0.007
+2024-02-04 14:56:48,199 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-02-04 14:56:48,199 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-02-04 14:56:49,077 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 6 connections  
+2024-02-04 14:57:35,515 1 INFO ? odoo: Odoo version 16.0-20240126 
+2024-02-04 14:57:35,516 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-02-04 14:57:35,516 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/etc/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-02-04 14:57:35,516 1 INFO ? odoo: database: momonadbuser@db:5432 
+2024-02-04 14:57:35,663 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-02-04 14:57:35,898 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 72bfcadd5cf9:8069 
+2024-02-04 14:57:42,663 1 INFO momonahealthcare odoo.modules.loading: loading 1 modules... 
+2024-02-04 14:57:42,672 1 INFO momonahealthcare odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2024-02-04 14:57:42,705 1 INFO momonahealthcare odoo.modules.loading: loading 56 modules... 
+2024-02-04 14:57:43,273 1 INFO momonahealthcare odoo.modules.loading: 56 modules loaded in 0.57s, 0 queries (+0 extra) 
+2024-02-04 14:57:43,436 1 INFO momonahealthcare odoo.modules.loading: Modules loaded. 
+2024-02-04 14:57:43,443 1 INFO momonahealthcare odoo.modules.registry: Registry loaded in 0.828s 
+2024-02-04 14:57:43,445 1 INFO momonahealthcare odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-02-04 14:57:43,626 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:57:43] "GET /websocket HTTP/1.1" 101 - 22 0.045 0.968
+2024-02-04 14:57:44,082 1 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2024-02-04 14:57:51,158 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 14:57:51] "GET /web/database/manager HTTP/1.1" 200 - 4 0.009 0.304
+2024-02-04 14:58:03,133 1 INFO None odoo.sql_db: ConnectionPool(used=3/count=3/max=64): Closed 1 connections to 'user=momonadbuser password=xxx dbname=momonahealthcare host=db port=5432 application_name=odoo-1 sslmode=prefer' 
+2024-02-04 14:58:03,222 1 INFO None odoo.service.db: DROP DB: momonahealthcare 
+2024-02-04 14:58:03,243 1 INFO None werkzeug: 196.191.221.14 - - [04/Feb/2024 14:58:03] "POST /web/database/drop HTTP/1.1" 303 - 4 0.080 0.552
+2024-02-04 14:58:04,079 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:58:04] "GET /web/database/manager HTTP/1.1" 200 - 2 0.004 0.613
+2024-02-04 14:58:39,641 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:58:39] "GET / HTTP/1.1" 303 - 1 0.002 0.013
+2024-02-04 14:58:39,881 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:58:39] "GET /web HTTP/1.1" 303 - 2 0.005 0.026
+2024-02-04 14:58:41,017 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:58:41] "GET /web/database/selector HTTP/1.1" 200 - 2 0.004 0.710
+2024-02-04 14:58:46,521 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-02-04 14:58:46,522 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-02-04 14:58:47,539 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 3 connections  
+2024-02-04 14:59:26,159 1 INFO ? odoo: Odoo version 16.0-20240126 
+2024-02-04 14:59:26,159 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2024-02-04 14:59:26,160 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/etc/odoo/addons/16.0', '/mnt/extra-addons'] 
+2024-02-04 14:59:26,160 1 INFO ? odoo: database: momonadbuser@db:5432 
+2024-02-04 14:59:26,297 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2024-02-04 14:59:26,540 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on c3c68090ddfd:8069 
+2024-02-04 14:59:29,203 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:59:29] "GET /websocket HTTP/1.1" 404 - 1 0.003 0.039
+2024-02-04 14:59:31,858 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:59:31] "GET / HTTP/1.1" 303 - 1 0.002 0.014
+2024-02-04 14:59:32,112 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:59:32] "GET /web HTTP/1.1" 303 - 2 0.005 0.024
+2024-02-04 14:59:32,909 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:59:32] "GET /web/database/selector HTTP/1.1" 200 - 2 0.004 0.340
+2024-02-04 14:59:38,672 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:59:38] "GET /web/database/selector HTTP/1.1" 200 - 2 0.005 0.096
+2024-02-04 14:59:41,578 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 14:59:41] "GET /websocket HTTP/1.1" 404 - 1 0.002 0.013
+2024-02-04 15:00:00,583 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 15:00:00] "GET /websocket HTTP/1.1" 404 - 1 0.003 0.016
+2024-02-04 15:00:17,108 1 INFO None odoo.service.db: Create database `momonahealthcare`. 
+2024-02-04 15:00:18,438 1 INFO momonahealthcare odoo.modules.loading: loading 1 modules... 
+2024-02-04 15:00:18,438 1 INFO momonahealthcare odoo.modules.loading: Loading module base (1/1) 
+2024-02-04 15:00:18,473 1 INFO momonahealthcare odoo.modules.registry: module base: creating or updating database tables 
+2024-02-04 15:00:19,084 1 INFO momonahealthcare odoo.models: Prepare computation of ir.module.module.menus_by_module 
+2024-02-04 15:00:19,084 1 INFO momonahealthcare odoo.models: Prepare computation of ir.module.module.reports_by_module 
+2024-02-04 15:00:19,085 1 INFO momonahealthcare odoo.models: Prepare computation of ir.module.module.views_by_module 
+2024-02-04 15:00:19,325 1 INFO momonahealthcare odoo.models: Prepare computation of res.partner.user_id 
+2024-02-04 15:00:19,326 1 INFO momonahealthcare odoo.models: Prepare computation of res.partner.commercial_partner_id 
+2024-02-04 15:00:19,326 1 INFO momonahealthcare odoo.models: Prepare computation of res.partner.display_name 
+2024-02-04 15:00:19,326 1 INFO momonahealthcare odoo.models: Prepare computation of res.partner.company_registry 
+2024-02-04 15:00:19,326 1 INFO momonahealthcare odoo.models: Prepare computation of res.partner.commercial_company_name 
+2024-02-04 15:00:19,326 1 INFO momonahealthcare odoo.models: Prepare computation of res.partner.partner_share 
+2024-02-04 15:00:19,401 1 INFO momonahealthcare odoo.models: Prepare computation of res.currency.decimal_places 
+2024-02-04 15:00:19,438 1 INFO momonahealthcare odoo.models: Prepare computation of res.company.logo_web 
+2024-02-04 15:00:19,487 1 INFO momonahealthcare odoo.models: Prepare computation of res.users.signature 
+2024-02-04 15:00:19,487 1 INFO momonahealthcare odoo.models: Prepare computation of res.users.share 
+2024-02-04 15:00:21,583 1 INFO momonahealthcare odoo.modules.loading: loading base/data/res_bank.xml 
+2024-02-04 15:00:21,593 1 INFO momonahealthcare odoo.modules.loading: loading base/data/res.lang.csv 
+2024-02-04 15:00:21,655 1 INFO momonahealthcare odoo.modules.loading: loading base/data/res_lang_data.xml 
+2024-02-04 15:00:21,693 1 INFO momonahealthcare odoo.modules.loading: loading base/data/res_partner_data.xml 
+2024-02-04 15:00:21,777 1 INFO momonahealthcare odoo.modules.loading: loading base/data/res_currency_data.xml 
+2024-02-04 15:00:22,355 1 INFO momonahealthcare odoo.modules.loading: loading base/data/res_company_data.xml 
+2024-02-04 15:00:22,373 1 INFO momonahealthcare odoo.modules.loading: loading base/data/res_users_data.xml 
+2024-02-04 15:00:23,495 1 INFO momonahealthcare odoo.modules.loading: loading base/data/report_paperformat_data.xml 
+2024-02-04 15:00:23,505 1 INFO momonahealthcare odoo.modules.loading: loading base/data/res_country_data.xml 
+2024-02-04 15:00:24,096 1 INFO momonahealthcare odoo.modules.loading: loading base/data/ir_demo_data.xml 
+2024-02-04 15:00:24,109 1 INFO momonahealthcare odoo.modules.loading: loading base/data/ir_config_parameter_data.xml 
+2024-02-04 15:00:24,118 1 INFO momonahealthcare odoo.modules.loading: loading base/security/base_groups.xml 
+2024-02-04 15:00:24,520 1 INFO momonahealthcare odoo.modules.loading: loading base/security/base_security.xml 
+2024-02-04 15:00:24,700 1 INFO momonahealthcare odoo.modules.loading: loading base/views/base_menus.xml 
+2024-02-04 15:00:24,825 1 INFO momonahealthcare odoo.modules.loading: loading base/views/decimal_precision_views.xml 
+2024-02-04 15:00:24,853 1 INFO momonahealthcare odoo.modules.loading: loading base/views/res_config_views.xml 
+2024-02-04 15:00:24,867 1 INFO momonahealthcare odoo.modules.loading: loading base/data/res.country.state.csv 
+2024-02-04 15:00:25,664 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_actions_views.xml 
+2024-02-04 15:00:25,818 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_asset_views.xml 
+2024-02-04 15:00:25,855 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2024-02-04 15:00:25,881 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_cron_views.xml 
+2024-02-04 15:00:25,918 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_cron_trigger_views.xml 
+2024-02-04 15:00:25,941 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_filters_views.xml 
+2024-02-04 15:00:25,969 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_mail_server_views.xml 
+2024-02-04 15:00:25,998 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_model_views.xml 
+2024-02-04 15:00:26,226 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_attachment_views.xml 
+2024-02-04 15:00:26,259 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_rule_views.xml 
+2024-02-04 15:00:26,295 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_sequence_views.xml 
+2024-02-04 15:00:26,330 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2024-02-04 15:00:26,365 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_ui_view_views.xml 
+2024-02-04 15:00:26,435 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_default_views.xml 
+2024-02-04 15:00:26,467 1 INFO momonahealthcare odoo.modules.loading: loading base/data/ir_cron_data.xml 
+2024-02-04 15:00:26,478 1 INFO momonahealthcare odoo.modules.loading: loading base/report/ir_model_report.xml 
+2024-02-04 15:00:26,485 1 INFO momonahealthcare odoo.modules.loading: loading base/report/ir_model_templates.xml 
+2024-02-04 15:00:26,496 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_logging_views.xml 
+2024-02-04 15:00:26,519 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2024-02-04 15:00:26,530 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_module_views.xml 
+2024-02-04 15:00:26,618 1 INFO momonahealthcare odoo.modules.loading: loading base/data/ir_module_category_data.xml 
+2024-02-04 15:00:26,706 1 INFO momonahealthcare odoo.modules.loading: loading base/data/ir_module_module.xml 
+2024-02-04 15:00:26,797 1 INFO momonahealthcare odoo.modules.loading: loading base/report/ir_module_reports.xml 
+2024-02-04 15:00:26,801 1 INFO momonahealthcare odoo.modules.loading: loading base/report/ir_module_report_templates.xml 
+2024-02-04 15:00:26,808 1 INFO momonahealthcare odoo.modules.loading: loading base/wizard/base_module_update_views.xml 
+2024-02-04 15:00:26,821 1 INFO momonahealthcare odoo.modules.loading: loading base/wizard/base_language_install_views.xml 
+2024-02-04 15:00:26,837 1 INFO momonahealthcare odoo.modules.loading: loading base/wizard/base_import_language_views.xml 
+2024-02-04 15:00:26,853 1 INFO momonahealthcare odoo.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2024-02-04 15:00:26,880 1 INFO momonahealthcare odoo.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2024-02-04 15:00:26,890 1 INFO momonahealthcare odoo.modules.loading: loading base/wizard/base_export_language_views.xml 
+2024-02-04 15:00:26,907 1 INFO momonahealthcare odoo.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2024-02-04 15:00:26,926 1 INFO momonahealthcare odoo.modules.loading: loading base/data/ir_actions_data.xml 
+2024-02-04 15:00:26,932 1 INFO momonahealthcare odoo.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2024-02-04 15:00:26,956 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_profile_views.xml 
+2024-02-04 15:00:26,991 1 INFO momonahealthcare odoo.modules.loading: loading base/views/res_company_views.xml 
+2024-02-04 15:00:27,026 1 INFO momonahealthcare odoo.modules.loading: loading base/views/res_lang_views.xml 
+2024-02-04 15:00:27,063 1 INFO momonahealthcare odoo.modules.loading: loading base/views/res_partner_views.xml 
+2024-02-04 15:00:27,226 1 INFO momonahealthcare odoo.modules.loading: loading base/views/res_bank_views.xml 
+2024-02-04 15:00:27,279 1 INFO momonahealthcare odoo.modules.loading: loading base/views/res_country_views.xml 
+2024-02-04 15:00:27,343 1 INFO momonahealthcare odoo.modules.loading: loading base/views/res_currency_views.xml 
+2024-02-04 15:00:27,401 1 INFO momonahealthcare odoo.modules.loading: loading base/views/res_users_views.xml 
+2024-02-04 15:00:27,567 1 INFO momonahealthcare odoo.modules.loading: loading base/views/ir_property_views.xml 
+2024-02-04 15:00:27,602 1 INFO momonahealthcare odoo.modules.loading: loading base/views/res_config_settings_views.xml 
+2024-02-04 15:00:27,611 1 INFO momonahealthcare odoo.modules.loading: loading base/views/report_paperformat_views.xml 
+2024-02-04 15:00:27,643 1 INFO momonahealthcare odoo.modules.loading: loading base/views/onboarding_views.xml 
+2024-02-04 15:00:27,676 1 INFO momonahealthcare odoo.modules.loading: loading base/security/ir.model.access.csv 
+2024-02-04 15:00:27,883 1 INFO momonahealthcare odoo.modules.loading: Module base loaded in 9.44s, 7893 queries (+7893 other) 
+2024-02-04 15:00:27,883 1 INFO momonahealthcare odoo.modules.loading: 1 modules loaded in 9.44s, 7893 queries (+7893 extra) 
+2024-02-04 15:00:27,922 1 INFO momonahealthcare odoo.modules.loading: updating modules list 
+2024-02-04 15:00:27,922 1 INFO momonahealthcare odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2024-02-04 15:00:28,713 1 INFO momonahealthcare odoo.modules.loading: loading 8 modules... 
+2024-02-04 15:00:28,713 1 INFO momonahealthcare odoo.modules.loading: Loading module web (2/8) 
+2024-02-04 15:00:28,757 1 INFO momonahealthcare odoo.modules.registry: module web: creating or updating database tables 
+2024-02-04 15:00:29,355 1 INFO momonahealthcare odoo.modules.loading: loading web/security/ir.model.access.csv 
+2024-02-04 15:00:29,371 1 INFO momonahealthcare odoo.modules.loading: loading web/views/webclient_templates.xml 
+2024-02-04 15:00:29,449 1 INFO momonahealthcare odoo.modules.loading: loading web/views/report_templates.xml 
+2024-02-04 15:00:29,564 1 INFO momonahealthcare odoo.modules.loading: loading web/views/base_document_layout_views.xml 
+2024-02-04 15:00:29,581 1 INFO momonahealthcare odoo.modules.loading: loading web/views/speedscope_template.xml 
+2024-02-04 15:00:29,588 1 INFO momonahealthcare odoo.modules.loading: loading web/views/lazy_assets.xml 
+2024-02-04 15:00:29,598 1 INFO momonahealthcare odoo.modules.loading: loading web/views/neutralize_views.xml 
+2024-02-04 15:00:29,606 1 INFO momonahealthcare odoo.modules.loading: loading web/data/ir_attachment.xml 
+2024-02-04 15:00:29,613 1 INFO momonahealthcare odoo.modules.loading: loading web/data/report_layout.xml 
+2024-02-04 15:00:29,676 1 INFO momonahealthcare odoo.modules.loading: Module web loaded in 0.96s, 882 queries (+883 other) 
+2024-02-04 15:00:29,676 1 INFO momonahealthcare odoo.modules.loading: Loading module auth_totp (3/8) 
+2024-02-04 15:00:29,711 1 INFO momonahealthcare odoo.modules.registry: module auth_totp: creating or updating database tables 
+2024-02-04 15:00:29,807 1 INFO momonahealthcare odoo.modules.loading: loading auth_totp/security/security.xml 
+2024-02-04 15:00:29,847 1 INFO momonahealthcare odoo.modules.loading: loading auth_totp/security/ir.model.access.csv 
+2024-02-04 15:00:29,863 1 INFO momonahealthcare odoo.modules.loading: loading auth_totp/data/ir_action_data.xml 
+2024-02-04 15:00:29,874 1 INFO momonahealthcare odoo.modules.loading: loading auth_totp/views/res_users_views.xml 
+2024-02-04 15:00:29,913 1 INFO momonahealthcare odoo.modules.loading: loading auth_totp/views/templates.xml 
+2024-02-04 15:00:29,920 1 INFO momonahealthcare odoo.modules.loading: loading auth_totp/wizard/auth_totp_wizard_views.xml 
+2024-02-04 15:00:29,952 1 INFO momonahealthcare odoo.modules.loading: Module auth_totp loaded in 0.28s, 175 queries (+175 other) 
+2024-02-04 15:00:29,952 1 INFO momonahealthcare odoo.modules.loading: Loading module base_import (4/8) 
+2024-02-04 15:00:30,013 1 INFO momonahealthcare odoo.modules.registry: module base_import: creating or updating database tables 
+2024-02-04 15:00:30,991 1 INFO momonahealthcare odoo.modules.loading: loading base_import/security/ir.model.access.csv 
+2024-02-04 15:00:31,038 1 INFO momonahealthcare odoo.modules.loading: Module base_import loaded in 1.09s, 891 queries (+891 other) 
+2024-02-04 15:00:31,038 1 INFO momonahealthcare odoo.modules.loading: Loading module bus (5/8) 
+2024-02-04 15:00:31,090 1 INFO momonahealthcare odoo.modules.registry: module bus: creating or updating database tables 
+2024-02-04 15:00:31,194 1 INFO momonahealthcare odoo.modules.loading: loading bus/security/ir.model.access.csv 
+2024-02-04 15:00:31,221 1 INFO momonahealthcare odoo.modules.loading: Module bus loaded in 0.18s, 103 queries (+103 other) 
+2024-02-04 15:00:31,222 1 INFO momonahealthcare odoo.modules.loading: Loading module web_kanban_gauge (6/8) 
+2024-02-04 15:00:31,349 1 INFO momonahealthcare odoo.modules.loading: Module web_kanban_gauge loaded in 0.13s, 12 queries (+12 other) 
+2024-02-04 15:00:31,350 1 INFO momonahealthcare odoo.modules.loading: Loading module web_tour (7/8) 
+2024-02-04 15:00:31,384 1 INFO momonahealthcare odoo.modules.registry: module web_tour: creating or updating database tables 
+2024-02-04 15:00:31,433 1 INFO momonahealthcare odoo.modules.loading: loading web_tour/security/ir.model.access.csv 
+2024-02-04 15:00:31,448 1 INFO momonahealthcare odoo.modules.loading: loading web_tour/security/ir.rule.csv 
+2024-02-04 15:00:31,464 1 INFO momonahealthcare odoo.modules.loading: loading web_tour/views/tour_views.xml 
+2024-02-04 15:00:31,506 1 INFO momonahealthcare odoo.modules.loading: Module web_tour loaded in 0.16s, 101 queries (+101 other) 
+2024-02-04 15:00:31,506 1 INFO momonahealthcare odoo.modules.loading: Loading module web_editor (8/8) 
+2024-02-04 15:00:31,564 1 INFO momonahealthcare odoo.modules.registry: module web_editor: creating or updating database tables 
+2024-02-04 15:00:32,324 1 INFO momonahealthcare odoo.modules.loading: loading web_editor/security/ir.model.access.csv 
+2024-02-04 15:00:32,341 1 INFO momonahealthcare odoo.modules.loading: loading web_editor/data/editor_assets.xml 
+2024-02-04 15:00:32,348 1 INFO momonahealthcare odoo.modules.loading: loading web_editor/views/editor.xml 
+2024-02-04 15:00:32,386 1 INFO momonahealthcare odoo.modules.loading: loading web_editor/views/snippets.xml 
+2024-02-04 15:00:32,453 1 INFO momonahealthcare odoo.modules.loading: Module web_editor loaded in 0.95s, 821 queries (+821 other) 
+2024-02-04 15:00:32,453 1 INFO momonahealthcare odoo.modules.loading: 8 modules loaded in 3.74s, 2985 queries (+2986 extra) 
+2024-02-04 15:00:32,753 1 INFO momonahealthcare odoo.modules.loading: Modules loaded. 
+2024-02-04 15:00:32,758 1 INFO momonahealthcare odoo.modules.registry: Registry loaded in 14.343s 
+2024-02-04 15:00:32,780 1 INFO momonahealthcare odoo.addons.base.models.ir_http: Generating routing map for key None 
+2024-02-04 15:00:32,931 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:00:32] "GET /websocket HTTP/1.1" 101 - 9 0.013 3.490
+2024-02-04 15:00:33,441 1 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2024-02-04 15:00:34,110 1 INFO momonahealthcare odoo.addons.base.models.res_users: Login successful for db:momonahealthcare login:admin@momonahealthcare.com from 196.191.221.14 
+2024-02-04 15:00:34,125 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:00:34] "POST /web/database/create HTTP/1.1" 303 - 16016 9.566 8.145
+2024-02-04 15:00:34,377 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:00:34] "GET /web HTTP/1.1" 303 - 6 0.004 0.007
+2024-02-04 15:00:37,182 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:00:37] "GET /web/login HTTP/1.1" 200 - 66 0.058 2.323
+2024-02-04 15:00:37,713 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:00:37] "GET /web/binary/company_logo HTTP/1.1" 200 - 2 0.001 0.004
+2024-02-04 15:00:38,180 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:00:38] "GET /web/webclient/translations/1707058835516 HTTP/1.1" 200 - 3 0.001 0.007
+2024-02-04 15:00:38,476 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:00:38] "GET /web/webclient/translations/1707058835867 HTTP/1.1" 200 - 3 0.001 0.005
+2024-02-04 15:00:46,993 1 INFO momonahealthcare odoo.addons.base.models.res_users: Login successful for db:momonahealthcare login:admin@momonahealthcare.com from 196.191.221.14 
+2024-02-04 15:00:47,001 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:00:47] "POST /web/login HTTP/1.1" 303 - 38 0.018 0.542
+2024-02-04 15:00:51,599 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:00:51] "GET /web HTTP/1.1" 200 - 91 0.077 4.223
+2024-02-04 15:00:52,103 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:00:52] "GET /web/assets/20-79990ee/web.assets_common.min.js HTTP/1.1" 200 - 4 0.004 0.016
+2024-02-04 15:00:52,109 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:00:52] "GET /web/assets/22-6bf707c/web.assets_backend_prod_only.min.js HTTP/1.1" 200 - 4 0.003 0.019
+2024-02-04 15:00:52,111 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:00:52] "GET /web/assets/21-60f24cb/web.assets_backend.min.js HTTP/1.1" 200 - 4 0.004 0.019
+2024-02-04 15:00:52,113 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:00:52] "GET /web/webclient/load_menus/b78f9f22518b994512836b6f7663cb2b228ff06297cd5ff7b99385c654df9b3c HTTP/1.1" 200 - 1 0.001 0.005
+2024-02-04 15:01:06,079 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:01:06] "GET /bus/websocket_worker_bundle?v=1.0.5 HTTP/1.1" 200 - 10 0.012 0.026
+2024-02-04 15:01:06,138 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:01:06] "POST /web/action/load HTTP/1.1" 200 - 11 0.006 0.010
+2024-02-04 15:01:06,299 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:01:06] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 200 - 8 0.004 0.009
+2024-02-04 15:01:06,692 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:01:06] "POST /web/dataset/call_kw/ir.module.module/get_views HTTP/1.1" 200 - 42 0.024 0.034
+2024-02-04 15:01:06,768 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:01:06] "GET /websocket HTTP/1.1" 101 - 1 0.001 0.005
+2024-02-04 15:01:07,334 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:01:07] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 4 0.004 0.009
+2024-02-04 15:01:07,366 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:01:07] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 44 0.026 0.017
+2024-02-04 15:01:17,117 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:01:17] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 42 0.015 0.017
+2024-02-04 15:01:17,142 1 INFO momonahealthcare werkzeug: 196.191.221.14 - - [04/Feb/2024 15:01:17] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 4 0.003 0.008
+2024-02-04 15:01:17,884 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 15:01:17] "GET /yan_documents_preview/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.002
+2024-02-04 15:01:17,902 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 15:01:17] "GET /yan_document_base/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.002
+2024-02-04 15:01:17,905 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 15:01:17] "GET /yan_hmis_documents_preview/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.002
+2024-02-04 15:01:17,907 1 INFO ? werkzeug: 196.191.221.14 - - [04/Feb/2024 15:01:17] "GET /yan_hims_icd10/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.005
+2024-02-04 15:01:26,675 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Starting job `Base: Auto-vacuum internal data`. 
+2024-02-04 15:01:26,701 1 INFO momonahealthcare odoo.addons.base.models.ir_attachment: filestore gc 20 checked, 0 removed 
+2024-02-04 15:01:26,751 1 INFO momonahealthcare odoo.addons.base.models.res_users: GC'd 1 user log entries 
+2024-02-04 15:01:26,775 1 INFO momonahealthcare odoo.addons.auth_totp.models.auth_totp: GC'd 0 totp devices entries 
+2024-02-04 15:01:26,789 1 INFO momonahealthcare odoo.addons.base.models.ir_cron: Job `Base: Auto-vacuum internal data` done. 

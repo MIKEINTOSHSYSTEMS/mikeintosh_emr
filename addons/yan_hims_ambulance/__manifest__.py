@@ -8,8 +8,8 @@
     """,
     'version': '1.0.2',
     'category': 'Medical',
-    'author': 'Yanos IT Solutions and Momona Healthcare',
-    'website': 'https://www.yanosgroup.com',
+    'author': 'Momona Healthcare',
+    'website': 'https://www.momonahealthcare.com',
     'license': 'OPL-1',
     'depends': ['yan_hims_tasks','fleet'],
     'data': [

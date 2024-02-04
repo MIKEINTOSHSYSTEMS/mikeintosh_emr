@@ -4,8 +4,8 @@
     'name': 'Add Products by Barcode reader in to Invoice',
     'version': '1.0.1',
     'category': 'Accounting',
-    'author': 'Yanos Group',
-    'website': 'https://www.yanosgroup.com',
+    'author': 'Momona Healthcare',
+    'website': 'https://www.momonahealthcare.com',
     'summary': """Add Products by scanning barcode to avoid mistakes and make work faster in Invoice.""",
     'description': """Add Products by scanning barcode to avoid mistakes and make work faster in Invoice.
     """,
